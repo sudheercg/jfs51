@@ -1,0 +1,176 @@
+Exception:
+An exception is an unexpected event that occurs during 
+the execution of a program and disrupts 
+the normal flow of instructions. 
+
+
+Exceptions are objects that belong to java.lang package
+
+
+The root class for Exceptions is Throwable.
+All the exceptions are derived from Throwable class. 
+
+
+There are two types of exceptions: 
+1. Checked Exceptions:
+----------------------
+   Checekd exceptions are also called as
+    Compile time exceptions: 
+   These exceptions are checked at the compile time
+   examples of checked exceptions: 
+   - IOException
+   - SQLException
+   - ClassNotFoundException
+   - FileNotFoundException
+   
+  Checked exceptions must be handled using
+  try..catch block or throws keyword.
+  
+  Checked exceptions generally occur due to external
+  conditions like file,database,networks
+  
+  RuntimeExceptions:
+  -----------------
+  RuntimeExceptions are also called as Unchecked Exceptions.
+  They occur at runtime
+  They are not checked at compile time/ 
+  Generally they occur due to programming mistakes. 
+  
+  RuntimeExceptions are the subclasses of RuntimeException class
+  Examples:
+  ArithmeticException
+  NullPointerException
+  ArrayIndexOutOfBoundsException
+  
+  
+  RuntimeExceptions compiles successfully, but fails at runtime.
+  
+  
+  throw and throws:
+  ================
+  throws:
+  throws keyword is used in method declaration. 
+  It tells the caller that the method may throw an exception.
+  
+  If the method does not handle the exception, it propagates to the calling method. 
+  If no method handles it, the JVM handles it and terminates the program. 
+  
+  throws keyword is mainly used for CheckedExceptions.
+  throws does not handle any exception, it only passes the responsibility to the caller
+  method. 
+  
+  try with multiple catch blocks:
+  \=============================
+  When different types of exceptions can occur in a single try block, we use
+  multiple catch blocks
+  Each catch handles a specific exception type. 
+  
+  syntax:
+  
+  try{
+    //statements
+   }catch(){
+     //first catch block
+   }
+   catch(){
+   //second catch block
+   }
+   
+   When there are multiple catch blocks, the catch with Parent exception will be after
+   the catch with child exception. 
+   
+   eg: 
+   catch (ArithmeticException e) { }
+   catch (ArrayIndexOutOfBoundsException e) { }
+   catch (Exception e) { }
+   
+   
+   
+   
+   
+   
+   
+   BankAccount
+   
+    - deposit(double amount)  - 
+                 -amount must not be less than or equal to zero
+                 if it is less than or equal to zer, throw
+                   InvalidAmountException
+               
+    - withdraw(double amount) - 
+              amount must not be less than or equal to zero
+              if amount not valid, throw InvalidAmountException
+             -  amount must be less than or equal to balance
+                if less than or balance,
+                 throw InsufficientBalanceException
+                 
+    To create custom exception: 
+    
+    1. Create a seperate class file with with custom exception name. 
+    Ex: public class InvalidAmountException
+    2. The class must extend either: 
+         - Exception  - to create a CheckedException
+         - RuntimeException - for UncheckedException   
+                 
+   3. Provide a constructor
+      eg: 
+      public InvalidAmountException(String message){
+       super(message);
+      }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+    
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+     
+   

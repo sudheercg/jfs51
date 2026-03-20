@@ -1,0 +1,82 @@
+Sorting: 
+--------
+Sorting is the process of arranging data or objects in a particular order,
+This order can be ascending or descending. 
+
+The order can be based on the : 
+numbers
+characters
+strings
+object fields.
+
+Java provides a method to sort data. 
+Collections.sort(list);
+Arrays.sort(array);
+
+Sorting Objects: 
+---------------
+
+when sorting user defined objects like Student, Employee,
+ java requires a comparision-rule.
+ 
+ Comparision rule can be applied using 2 ways:
+ 1. Comparable interface :
+    Comparable interface is present in java.lang package
+    - It is used to define the natural sorting order of 
+      objects of a class. 
+    - A class has to implement Comparable interface, to 
+       tell how objects of that class should be compared and
+       sorted. 
+    Method in Comparable: 
+    
+    int compareTo(Object o)
+    
+   compareTo method returns 3 possible values:
+   - it returns a negative value 
+      - when current object is less 
+         than the other  object
+   - it returns a zero:
+      when both objects are equal
+   - returns a positive value
+      when current object is greater than other obj
+     
+       
+    
+ 
+ 2. Comparator interface:
+    It is in java.util package
+    Comparator is  an interface to define custom 
+    sorting order for objects.
+    It allows to compare two objects externally outside 
+    the class. 
+    It contains an abstract method: 
+    int compare(Object o1, Object 02)
+    
+    It returns: 
+    Negative → first object comes before second
+    Zero → both objects are equal
+    Positive → second object comes before first
+    
+    
+ TreeSet (java.util) 
+  - Stores unique elements 
+  - Elements are stored in sorted order
+  - Default sorting order is ascending
+  - It does not allow a null value
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+    
+ 
+ 

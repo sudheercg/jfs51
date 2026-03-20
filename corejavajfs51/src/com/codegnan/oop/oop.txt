@@ -1,0 +1,50 @@
+paradigms  - programming style
+java - oop
+oop is programming paradigm which is based on
+objects and classes.
+Objects contain the data and code. 
+
+Student  
+    - name      Ram 100 ECE 22 35  M
+    - id
+    - branch
+    - age
+    - weogjt
+    - gender 
+    
+Class: is a blueprint/template for creating objects
+
+Syntax:
+ 
+class ClassName{
+
+  // variable declaration
+   dataType variable1;
+   dataType variable2;
+   
+   //Methods(behaviours/functions)
+    returnType methodName(){
+       // method body
+    }
+
+}
+
+
+Object: An object is an instance of a class. 
+object has state(data)and behaviour()
+Syntax to create an object: 
+ClassName objectReference = new ClassName(); 
+
+
+Constructor:
+============
+Constructor initializes the object of the class.
+
+By default, a constructor is created implicitly for every class. 
+This constructor is known as a default constructor. 
+
+
+
+
+
+

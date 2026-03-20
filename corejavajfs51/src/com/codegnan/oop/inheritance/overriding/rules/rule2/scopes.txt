@@ -1,0 +1,7 @@
+1. A child can have the 
+   same method signature as that of the parent
+2. Child class cannot reduce the visibility of the
+   overridden method. 
+   
+   Weakest to Strongest modifiers:
+   private<default <protected<public

@@ -1,0 +1,42 @@
+Covariant return types :
+Return type of the overridden method in the child can be of 
+the same as Parents return type or a covariant return type. 
+
+Covariant return types: The child class of the parents return type. 
+Eg: If BankAccount is a parent class and SavingsAccount is the child class
+    If BankAccount has a method with BankAccount object as a return type.
+    then in the child class this method can be overridden
+    with:
+    a. same BankAccount object as return type OR
+    b. return type can be the subclass of BankAccount i.e SavingsAccount.
+
+    
+   
+   
+   
+   
+   Object Casting: 
+   Converting one type of object into another type of object is known as 
+   Casting.
+   
+   When an object reference  refers to a Child class object, it is known as 
+   Upcasting. 
+   
+   eg: Parent obj = new Child(); //upcasting
+   
+   
+   Upasting automatically. 
+   It happens implicitly. 
+   
+   
+   Downcasting: Converting Parent reference to a Child referece.
+   
+   eg: Parent p = new Child();//upcasting or automatic casting
+       Child c = (Child)p;// down casting
+   
+   
+   
+   
+   
+   
+   

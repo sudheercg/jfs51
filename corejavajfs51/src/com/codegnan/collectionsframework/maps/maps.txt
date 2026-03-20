@@ -1,0 +1,114 @@
+Map:
+K,V
+
+
+Map::
+
+PanNo  EmployeeDetails
+
+abspy7622e  Ramesh       - Entry
+axspu23y    Sam
+absod666    Sunitha
+
+Entry is a Key value pair in a map.
+EntrySet is a set of Entries. 
+
+Keyset: All the keys inside a map are grouped together
+        as keySet.
+        -It is a Set because keuyys are not allowed to have
+         duplicates
+         
+Values: There can be any number of duplicate values for a keys.
+
+Map does not extend Collection interface because
+ the data structure is different
+ 
+ Collection interface is extended by
+   -List
+   - Set
+   -Queue
+   
+Collections stores only elements, but Map stores
+ Key-Value Pairs. 
+In Collection, operations like 
+
+add() work with single 
+ objects, while Map requires two objects(Key and value).
+The design and operation of Map is different, so Map
+was kept seperate from Collection hierarchy.  
+
+
+Map
+ - HashMap
+ - LinkedHashMap
+ - TreeMap
+ 
+ Features of HashMap: 
+ Stores Key->value pairs
+ Keys must be unique
+ Allows one null key
+ allows multiple null values
+ Order is not guaranteed
+ Very fast for insertion and deletion. 
+ 
+ Methods of HashMap:
+ 1. put(K key, V value):
+     used to insert key value pair into HashMap. 
+     If the key is already present the old value is replaced
+      with the new value. 
+      
+ 2. get(Object key)
+ - Used to retrieve the value associated with key. 
+ - returns null if key is not found
+ 
+3. remove(Object key):
+ - used to delete an entry from HashMap.
+4. keySet() - returns the set of all keys in Hashmap
+5. values() : returns collection of all values stored in hashmap
+6. entrySet(): returns all key-value pairs as Entry objects
+7. size(): returns the number of key -value pairns in the hashMap.
+8.clear(): removes all the key-value pairs in the hashMap. 
+
+LinkedHashMap: 
+=============
+LinkedHashMap extends HashMap and maintains the insertion
+order of the elements. 
+
+- It internally uses Doubly linkedList and Hash table 
+- Stores data in key-value pairs
+- keys are unique
+- Maintains insertion order
+- allows one null key and multiple null values
+- slightly slower than hashmap because it maintains order. 
+      
+TreeMap: 
+TreeMap implements Map interface
+- Stores key-value pairs in sorted order of keys. 
+- keys are automatically sorted in ascending order
+- Null keys are not allowed but multiple values are allowed
+- TreeMap is slower than HashMap because it maintains
+   sorted order
+_ TreeMap allows custom sorting using Comparator. 
+- If we want the elements to be sorted in reverse order,
+  we can pass Collections.reverseOrder() method in TreeMap
+  constructor. 
+  
+
+ 
+ 
+ 
+ 
+ 
+  
+        
+
+
+
+
+
+
+
+
+
+
+

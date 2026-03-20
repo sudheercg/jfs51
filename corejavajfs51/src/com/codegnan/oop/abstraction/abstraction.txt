@@ -1,0 +1,222 @@
+Abstraction: 
+
+Abstraction means hiding internal implementation
+details and showing only the essential features. 
+
+
+
+Abstraction = Hide unnecessary details +
+              Show only important things. 
+        
+In java abstraction can be achieved with : 
+1. Abstract classes
+2. Interfaces
+
+
+//concrete methods
+A method with implementation is known as concrete
+method
+
+
+
+public void displayCarDetails(){
+   System.out.println(name);
+   System.out.println(price);
+   System.out.println(transmissionType);
+   System.out.println(speedLimit);
+
+}
+
+//abstract methods
+
+Abstract methods are the methods without body or 
+implementation. 
+public void displayCarDetails();
+In java abstraction can be achieved with: 
+1. Abstract classes
+2. Interfaces
+
+Abstract class: As class is said  to be abstract
+when you have both concrete and abstract methods
+in a class.
+
+Syntax: 
+
+abstract className{}
+//abstract keyword is used to create an abstract class.
+
+In abstract classes if you want  to create an 
+abstract method, we use abstract keyword: 
+Syntax: 
+
+accessModifdier abstract returntype methodName();
+
+Requirement: 
+-------------
+Payment System with Abstract Class 
+Objective: Create payment processing system using abstract class.
+Requirements:
+-	Create abstract Payment class
+-	Implement CreditCardPayment, DebitCardPayment, UPIPayment
+?	Different processing logic for each payment type
+?	Validation using nested if-else
+?	Cannot instantiate Payment directly
+
+
+Payment Status:
+
+Initially it will be in the "PENDING"
+If the amount is a valid amount, then status becomes "SUCCESS"
+If the amount is invalid amount then status is 'FALSE'
+
+
+
+
+
+Interfaces: 
+Interface is a contract which will define what a class  must do but it will not define
+how to  do.
+
+
+interface Flyable{
+
+
+//abstract
+public  void fly();
+
+}
+
+Aeroplane - it must follow the Flyable contract
+
+
+public Aeroplane implements Flyable{
+
+Syntax to create an interface: 
+
+
+interface InterfaceName{
+
+   //variables are by default public static and final 
+   int var =100;
+
+   //abstract methods
+  abstract void method1();
+   void method2();
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abstract classes:
+----------------
+-We cannot create an object of Abstract class.
+-Objects can be created only for the child classes which inherits abstract class.  
+- If a class has at least one abstract method, the class must be abstract. \
+- abstract methods in abstract class must be implemented in the 
+  child classes. 
+- if we are  not implementing abstract method in the child class, then
+   the child class must also be abstract class. 
+
+- We can have a constructor for abstract class.
+- Constructor is called  when child class object is created. 
+
+
+Methods and Modifiers:
+----------------------
+Abstract methods cannot be private. 
+They cannot be final
+They cannot be static.
+
+
+Abstract classes  are used when 
+- we want a common behavior for some child  classes
+- and some uncommon behavior for child classes.
+
+- the methods with uncommon behavior are declared as abstract methods
+- the methods with common behavior are declared as concrete methods.. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

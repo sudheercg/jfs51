@@ -1,0 +1,55 @@
+Difference between Abstract class and interface:
+
+1. Abstract class is declared using 'abstract' keyword
+   Interface is declared using 'interface' keyword
+   
+2. Abstract class can have Abstract methods and concrete
+   methods
+   Before Java 8 interfaces are allowed  to have only
+    abstract methods
+    From Java 8 onwards interfaces can have
+     a. abstract methods
+     b. Default methods
+     c. static methods
+ 
+ 3. Abstract class can have 
+     a. instance variables
+     b. static variables
+     c. final variables
+     We can use any access modifier
+     
+     Interfaces can have variables. 
+     These variables are by default
+     public, static and final variables. 
+     
+ 4. Abstract class can have constructors
+    Interfaces cannot have constructors
+ 
+ 5. Abstract class can extend another abstract class.
+    An interface can extend another interface.
+    
+    A class can extend only one class
+    A class can implement multiple interfaces.
+ 
+ 6. Methods in abstract class can be
+    a. private
+    b. protected
+    c. default
+    d. public 
+    
+    Methods in interface are by default public. 
+    In interfaces we cannot make the methods protected or private
+    
+7. We use abstract class  when: 
+   classes are related
+   when classes share common code
+   When we need constructors
+   When we need instance variables.    
+   
+   We use interface when: 
+    we want multiple inheritance(multiple interface implementation
+    )
+    When you want to define a contract. 
+    When you want full abstraction.  
+
+ 

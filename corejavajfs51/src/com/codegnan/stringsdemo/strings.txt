@@ -1,0 +1,150 @@
+String
+=======
+  - group of characters/sequence of characters
+		     array of characters.
+		
+		eg: ram@Codegnan.com - String
+		//  01234            - characters in String can be accessed with
+		                       index. 
+		
+String class is present in java.lang.
+		
+String object can be in 2 ways: 
+  - using a new keyword
+  - literal 
+  
+  1. created using new keyword		
+		eg: String country = new String("US");
+  When String is created using a new keyword, the object is stored
+  in Heap memory. 
+  
+  2. String can be created using a literal
+     Meaning, a String can be directly assigned to a String variable. 
+     Literal is a constant value assigned to a variable. 
+     eg: String company = "Codegnan";
+     
+     
+     
+  String constant Pool: 
+  =====================
+  1. String constant pool is a special memory area inside
+      Heap in java. 
+  2. It is used to store String literals.
+  3. The main purpose is memory optimization
+     and reuse of String objects. 
+  4. When a String literal is created, java first checks the 
+     String constant pool.
+  5. If the same STring already exists in the pool, Java reuses
+     the existing object instead of creating a new one. 
+   6. If it does not exist,  new object is created in the 
+     pool 
+     
+     eg: String s1 = "Java";
+         String s2 = "Java";
+         
+         In the above, only one "Java" is created in the 
+         String constant pool.
+         
+         s1 and s2 refers to the same object.     
+     
+ 
+  
+  
+  
+		
+String comparision:
+------------------
+String objecgs can be compared in 2 ways
+1. Comparision of references : String references can be compared
+   by using a relational operator == which returns boolean true or false
+2. Comparision of content:   String content can be comp[ared
+   by using a method equals() which returns a boolean true or false 
+    
+String Immutability
+-------------------
+Immutable means unchangeable or cannot be modified. 
+Strings created with String class are immutable. 
+Strings are immutable. 
+Once created, they cannot be modified. 
+concat(): concat() method of String class will create a new object in memory. 
+          It will not modify the existing objectg as Strings are immutable in 
+          nature. 
+          
+       
+       
+Mutable Strings can be created with:    
+StringBuffer
+StringBuilder
+
+String Buffer: 
+StringBuffer is a mutable sequence of characters
+ used to create modifiable strings in java. 
+ 
+Mutable: The content of the object can be changed without creating a new
+         object
+         
+StringBuffer is used to create thread-safe String objects. 
+Thread-safe: When String objects are thread safe, it means that  multiple
+              threads can access the Strings safely.
+              All the methods in StringBuffer are by default 
+              synchronized.
+              StringBuffer is slower than String
+              
+StringBuilder institute =new StringBuilder("Codegnan");
+institute.append("Insitutute"); Codegnan Institute
+sop(institute);// Codegnan Institute
+
+
+ArrayList  - class 
+implements List
+List extends Collection
+Collection extends Iterable
+
+Array vs ArrayList
+Array is fixed in size. 
+ArrayList is not fixed in size.
+          - dynamic
+          
+   ArrayList  aList = new ArrayList(); 
+   
+   List l ;
+   l= new ArrayList();  
+   
+Cursors: 
+--------
+
+Cursors are used to retrieve elements from collections. 
+There are three types of cursors: 
+1. Enumeration - legacy
+
+- Enumeration is used to retrieve elements from legacy classes like \
+   Vector and Stack
+   - It moves in forward direction
+   - It is read only ..meaning it cannot remove elements. 
+   
+   
+2. Iterator
+3. ListIterator     
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+ 
+
+              
+              
+              
+              
+ 
+
+
+
+
+

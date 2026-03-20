@@ -1,0 +1,300 @@
+Collections Framework:
+=====================
+java.util\
+
+Collections - 
+
+List  - ArrayList, LinkedList()....
+ Fruits List   - Apple, Banana, Cherry, Apple
+ StudentsList 
+ EmployeesList
+
+Array: - homogeneous elements
+String[] fruitsArray = new String[5];
+
+
+Collections
+-List - Duplicate can be stored
+FruitsList: 
+Apple
+banana
+Cherry
+
+
+
+
+
+-Set - Duplicates are not allowed
+CountriesSet: 
+India
+US
+Pakistan
+Bangladesh
+Srilanka
+Australia
+
+
+-Map  
+Key Value pair
+
+CitizenMap: 
+
+AadharID     PersonName
+
+222222       Sudheer
+999999       Raj
+767676       Sam
+
+
+
+
+
+
+
+
+
+
+-Queue
+
+
+
+
+Wrapper classes: 
+Wrapper classes are used to convert a primitive type to an 
+
+byte - Byte
+short - Short
+int - Integer
+long - Long
+float - Float
+double - Double
+char - Character
+boolean - Boolean
+
+Autoboxing: 
+The conversion of a primitive type to an object type is 
+called Autoboxing
+
+int x =10;
+Integer y =x;//Autoboxing
+int z =y;  // unboxing
+
+Autounboxing: 
+The conversion of object type to primitive type is called
+AutoUnBoxing
+
+
+Generics: 
+=========
+
+Generics will allow the classes, interfaces and methods to work with different data 
+types while providing compile-time type safety. 
+
+Typesafety: Typesafety in generics means errors caused by using the wrong data type
+            are detected at compile time. This prevents ClassCastException at
+            runtime. 
+            
+Generics works only with reference types 
+for eg: Printer<int>  - wrong primitives not allowed
+        Printer<Integer> -correct
+        
+The type parameter names L:
+T  - type
+E - element
+K- key
+V - value
+N - number
+
+Cursors:
+
+- Cursor is used to iterate elements
+3 types: 
+1. Enumeration - legacy
+2, Iterator - a global curosr can be used with any collection
+            - moves only in forward direction
+3. ListIterator - it can used only with List implementation classes
+            - moves forward and backward
+            
+            
+ Similarities between ArrayList and LinkedList:
+ Both: 
+ Implements List Interface
+ accepts heterogeneous objects
+ accepts duplicate elements
+ accepts a null 
+ insertion order is maintained
+ 
+ 
+ ArrayList vs LinkedList
+ -----------------------
+ ArrayList uses a dynamic array internally
+ LinkedList uses a doubly linkedlist internally. 
+    - nodes connected with previous and next references
+    
+ ArrayList stores elements in continuous memory locations
+ Linked stores elements as seperate nodes lined together
+ 
+ ArrayList is fast for searching - it provides fast random access by using
+    get(index) method
+ LinkedList slower for access because it must traverse 
+ the nodes sequentially
+ 
+ ArrayList insertion/deletion in the middle is slow because
+ elements must shift
+ LinkedList insertion/deletion is faster because 
+ shifting is not required and only the links are updated.
+  
+ ArrayList uses less memory
+ LinkedList uses more memory because each node 
+  stores data + two references
+ 
+ArrayList mainly implements List interface
+LinkedList implements List,Queue and Deque
+
+ArrayList supports all list operations
+LinkedList additionally supports addFirst(),
+ addLast(),removeFirst(),  removeLast() etc. 
+
+ArrayList is better for search and accessing elements
+LinkedList is better for frequent insertions 
+ and deletion operations. 
+ 
+ LinkedList implements List interface, Queue and Deque. 
+ 
+  Queue - FIFO   - insertion at the end of the queue. 
+  Deque - Double edged queue 
+  
+  Queue: 
+  -------
+  offer() - adding element
+  poll() remove the first element
+  peek()  view first element
+  
+  Deque: 
+    - pollFirst() - remove first element
+    -pollLast() remove last element
+    getFirst() retrieves first element
+    addFirst()   insert element at begining
+    addLast()    insert element at End
+  
+ 
+ Set operations: 
+ ----------------
+ - Set is an interface in java.util package which extends
+  Collection interface.  
+- Set is a type of collection which does not allow duplilcate elements.
+- It does not maintain insertion order for some implementations like
+   HashSet
+- Set interface is implemented by classes like HashSet, LinkedHashSet,
+ and TreeSet classes. 
+- Only one null is allowed 
+
+
+HashSet is an implementation of Set interface
+HashSet does not maintain insertion order
+It does not allow duplicates
+It allows a null object
+It allows operations like Union and Intersection
+addAll(Set s) method is used to combine the elements of 2 sets.
+ but duplicates will be removed
+retainAll(Set s) method is used for intersection oepration, i.e.
+common elements present in both sets. 
+
+removeAll():
+Removes all elements that present in another collection. 
+
+LinkedHashSet: 
+Both HashSet and LinkedSet implements Set interface
+Both do not allow duplicates
+Main difference is about the ordering of the elements
+HashSet does not maintain insertion order, where as LinkedHashSet
+maintains insertion order.
+Insertion order is preserved using LinkedHashSet,
+
+If you want to maintain  unique elements in a Set and 
+also want the insertion order to be preserved then 
+LinkedHashSet  is the best option. 
+
+LinkedHashSet internally maintains Hashtable for  fast  searching
+LinkedHashSet internally implements doubly linked list to
+maintain insertion order. 
+
+
+Collection vs Collections
+-------------------------
+- Collection is an interface in Java collections framework
+It is the root interface to represent objects
+It provides basic methods to store , retrieve and manipulate elements. 
+
+Interable<-Collection<-List.Set,Queue
+
+Common methods present in Collection: 
+- add(),remove,size(), contains() ,clear(), isEmpty()
+
+
+2. Collections (present in java.util package):
+Collections is a utility class that contains static methods to
+operate on Collection objects
+It is used for sorting, searching, reversing and other operations.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+            
+            
+ 
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

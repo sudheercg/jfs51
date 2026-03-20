@@ -1,0 +1,84 @@
+
+Inheritance: Its a mechanism where one class
+acquires the properties and methods of another class
+
+Single Inheritance:
+ Parent
+   |
+ Child
+ 
+2. Multilevel inheritance:
+       
+     GrandParent  
+         |
+       Parent
+         |
+       Child
+ 
+3. Hierarchial inheritance: 
+          
+          Parent
+          |  |  |
+         c1  C2  C3
+         
+
+
+Syntax:
+         
+class ParentClass{
+  //parent members
+
+ }
+ 
+ class ChildClass extends ParentClass{
+ // child members + inherited parent members
+ }
+ 
+ We use "extends" keyword to inherit the properties
+ of a parent class by the child class. 
+ 
+ Parent    Child
+ Super      Derived
+ Base       Subclass
+ 
+ Access modifiers: 
+ Access modifiers are used to regulate/control the access
+ of the class/constructors/methods/variables. 
+ 
+ Java supports 4 different access levels/modifiers
+ 1. public  - can be accessed from 
+            a. within the same class,
+            b. from other class in the same package
+            c. from other class in a different package
+ 
+ 2. private: can be accessed only from the class in which 
+             it is declared. 
+ 3. protected: can be accessed from 
+            	a. within the same class,
+                b. from other class in the same package
+                c. from other class in a different package
+ 4. default: accessed from: 
+ 	            a. within the same class,
+                b. from other class in the same package
+ 
+ 
+ Protected Access modifier: 
+ Members declared as protected can be accessed within 
+ the same package and also accessed by subclasses in same or another
+ packages
+ 
+Is mainly used when we want to allow inheritance  access 
+ but restrict public access
+
+ 
+ Default access modifier: 
+ It is also called package-private modifier.
+ If no access modifier is specified it is called default access.
+ It is accesible within the same package
+ It cannot be accessed from outside the package even by the subclasses.
+ 
+ 
+ 
+ 
+ 
+ 
