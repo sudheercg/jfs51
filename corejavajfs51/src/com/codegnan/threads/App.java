@@ -1,4 +1,4 @@
-package com.codegnan;
+package com.codegnan.threads;
 
 /**
  * Hello world!

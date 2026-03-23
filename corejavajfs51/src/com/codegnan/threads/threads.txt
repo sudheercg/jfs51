@@ -1,0 +1,91 @@
+Thread 
+
+- A thread is an executional path or sequnce in the program. 
+
+
+Where does a thread exist ?
+
+- When we switch on the computer, a special program called
+  OS or operating system is loaded from hard disk to memory(RAM)
+  
+ - This OS will help us interact with the hardware and the CPU.
+ 
+ - When you try to use any application in your computer, 
+   the OS will take that application program from the disk and creates
+   an instance of that application in the memory. 
+   
+- This instance is called a process, 
+  process is also known as "Context" of the application. 
+  
+  - Each process contains metadata which will have the following: 
+    - PID or processID
+    - files which the application uses for reading and writing of data
+    - code or the program instruction which are goibg to be executed
+      on the CPU
+    - heap which contains the data needed for our application
+  
+  main thread:
+  =============
+  main thread is the thread used by JVM to execute a program
+  main thread will have its own stack and instruction pointer, 
+   stack: a region in the memory where our local variables or object
+          references and methods are executed
+   instruction pointer: Its a pointer which points to the address of 
+    next instruction which the thread is gouibg to execute. 
+    
+    
+process vs threads:
+===================
+
+Memory:
+ Process has its own memory
+ Threads will share the memory with other threads in the process
+ 
+ Weight :
+ Process is heavy weight  as it takes more time to start and stop the 
+  process. 
+  PRocess consumes more resources like memory
+  Switching from one process to another process is not fast. 
+  
+  Thread is light weight, it takes less time to start and stop. 
+  Switching from one thread to another thread is faster. 
+  
+  Thread class: 
+  - java.lang
+  
+  
+  Thread creation: Thread can be created using 2 ways: 
+  1. Thread can be created by extending Thread class
+  2. By implementing Runnable interface. 
+  
+  When you extend Thread class to create a thread, you 
+  lock your class, your class cannot extend any other class.
+  
+  When you implement Runnable interrface to create a Thread, 
+  you are free to extend any class.
+  
+  Creating a Thread using Runnable aalways preferred  in projects. 
+  We can  use Java 8 features like Lambda expression when you use
+  Runnable. 
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      

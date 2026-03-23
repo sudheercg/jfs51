@@ -1,0 +1,40 @@
+Stack 
+Stack follows LIFO (Last in first out)
+Last element added is removed first. 
+
+Queue: 
+Queue follows FIFO(First in first out)
+First element added is removed first. 
+
+Stack is present in java.util package
+Queue is present in java.util package
+
+Stack is a class which extends Vector class
+Queue is an interface which has the following implementations: 
+ - LinkedList
+ - PriorityQueue
+ - ArrayDeque
+
+
+Usecases for stack and Queue:
+- Undo and redo operations
+- Queue can be used for task scheduling. 
+
+
+ArrayDeque:
+===========
+ArrayDeque is a class which implements Deque interface
+Deque means Double ended Queue. 
+Deque allows insertion and deletion fro both ends. 
+It can behave like Stack and  Queue. 
+
+
+
+
+
+
+
+
+
+
+
