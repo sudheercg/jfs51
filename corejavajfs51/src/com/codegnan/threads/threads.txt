@@ -69,6 +69,83 @@ Memory:
   Runnable. 
   
   
+  Thread Synchronization: 
+  
+  Synchronization is a concept which makes sure that only one thread can execute
+  the block of code at a time. 
+  
+  It prevents inconsistent data or a race condition when multiple threads try to 
+  modify the shared resources. 
+  
+  To void this race condition we use the ekey word
+  'synchronized'
+  
+  When a thread enters a synchronized method it acquires the lock  of the 
+  the object.
+  
+  other threads trying to execute the synchronized method on the same object
+  must wait until the lock  is released.
+  
+  When a thread is executing synchronized method, no other thread will 
+  interrupt in the middle. 
+  
+  When the thread completes its task, it releases the lock and changes
+  made by thread will updated in the main memory. 
+  
+  when the next thread acquires the lock, it reads the values from the memory. 
+  
+  without synchronization, multiple threads may read a shared variable
+  at the same time, this will lead to inconsistent data and this is called race condition. 
+  
+  
+  Message - write(), read() - Message object shared by both PRoducer and Consumer.
+   It is a shared resource.
+  
+  Producer - Thread which creates a message, it calls the write() method of Message
+  
+  Consumer - Which consumes(read()) the messages produced by Producer thread.
+  
+  Producer waits till Consumer has consumed(read) the produced message. 
+  Consumer waits till Producer produces a new message. 
+  
+  When producer producer produces(write) a message, it will notify the consumer.
+  so that consumer know that a new message is available and consumer can consume that message.
+  
+  
+  Similarly, Consumer will notify the Producer that the message has been consumed. so that
+  producer can produce a new message. 
+  
+  Me
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   

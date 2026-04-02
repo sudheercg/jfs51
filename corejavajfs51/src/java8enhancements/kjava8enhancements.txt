@@ -1,0 +1,140 @@
+Java 8 enhancements:
+
+- Introduced in 2014
+- Introduced many modern programming features
+
+- Java 8 introduced Functional Programming:
+  - Functional programming is a programming style where programs
+    are built using pure functions which avoid changing state
+    and side effects.
+  - It focuses on using functions as first-class citizens.
+   
+  - side effect is any change a function will make outside its scope like
+  modifying a variable, printing output, or updating a file. 
+  
+  -First class citizens: 
+  First class citizens means functions can be treated as variables
+  they can be assigned to a variables,
+  they can be passed as arguments
+  and they can be returned from other functions. 
+  
+ Important features of Java 8: 
+ 1. Lamdda expressions
+    - used to write short and clean code
+ 2. Stream API
+    - used to process collection like filtering, sorting, mapping etc. 
+    
+ 3. Default and static methods  have been introduced in interfaces
+ 
+ 4, Method References
+    - Short form of lambda expression  
+    
+ 5. Functional interfaces are introduced in Java 8
+ 
+ 6. Optional class - Useful class to handle null values. It helps
+     to avoid NullPointerException
+     
+ Functional Interface:
+ ---------------------
+ An interface with a Single Abstract method, but with any number
+ static and default methods is known as a Functional interface 
+ 
+ - A functional interface when annnotated with 
+   @FunctionalInterface, the interface allows only
+    a single abstract method with any number of static and default
+    methods. 
+    
+    
+ Predefined Functional Interface  in Java 8:
+ ===========================================
+ 
+ Predefined functional interface are part of the package
+ java.util.function
+ 
+ - Supplier
+ -Predicate
+ -Consumer
+ -Function
+ 
+ Predicate
+ - Predicate functional interface is present in 
+   java.util.function
+ - It has a Single abstract method which returns a boolean value:
+    boolean test(T t);
+  - test() method has a single argument and returns a boolean
+  
+  - this method is implemented to test a particular condition
+ 
+ 
+ BiPredicate: 
+ - It is in java.util.function
+ - Accepts 2 arguments of types T and U
+ - syntax: boolean test(T t, U u);
+ - It returbs boolean result based on the given logic. 
+ 
+ 
+ Function: 
+ - present in java.uti.function 
+ - it has a Single abstract method: 
+   R apply(T t);
+   where 
+   R can be any Return type
+   T  can be an  argument of any type. 
+ 
+ 
+ Function Chaining:
+ Function chaining combines multiple Functions into a sequence. 
+ - The output of one function becomes the input of the next function
+ 
+ 
+ .andThen() method: 
+ - andThen() applies first function, then applies the next function on the result. 
+ Function<T,R> combinedFunction= firstFunction.andThen(secondFunction);
+ 
+ .compose() method: 
+ - compose() method applies the second Function first, then applies first function
+   on the result. 
+   
+    Function<T,R> combinedFunction= firstFunction.compose(secondFunction);
+   
+ 
+ Consumer:
+ - Consumer is present java.util.function package
+ - It represents an operation that takes one input, and returns no result.
+   meaning it returns void. 
+   
+   Method: 
+   
+   void accept(T t);
+   
+   - Its generally used for printing a value
+   - updating a field of an object. 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ \
+ 
+ 
+ 
+ 
+    
+    
+    
+    
+    
+  
+  
+  
+  

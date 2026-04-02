@@ -1,15 +1,18 @@
 package com.codegnan.threads;
 
+// Thread creation using Runnable interface (Lambda)
+public class MyRunnable {
 
-// Thread creation using Runnable interface
-public class MyRunnable implements Runnable {
+    public static void main(String[] args) {
 
-	@Override
-	public void run() {
+        // Creation of a Runnable thread using Lambda expression
+        Runnable r = () -> {
+            for (int i = 0; i <= 5; i++) {
+                System.out.println("Thread running from Lambda: " + i);
+            }
+        };
 
-    for(int i =0; i<=5; i++) {
-		System.out.println("Thread running: "+i);
-	}
-
-  }
+        Thread t = new Thread(r);
+        t.start();
+    }
 }
