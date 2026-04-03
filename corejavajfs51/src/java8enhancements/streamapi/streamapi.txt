@@ -1,0 +1,116 @@
+StreamAPI:
+
+StreamAPI is introduced in Java 8.  
+StreamAPI contains the classes for processing the objects. 
+StreamAPI is present in package java,util.stream
+
+IOStreams are different from StreamAPI
+IOStreams are for performing read and write operations on files. 
+Whereas StreamAPI is used to process the collection of objects. 
+
+Stream: A Stream is a sequence of objects. 
+        A stream supports various methods which can be used to process
+        the object to produce the desired output. 
+        
+Streams help: 
+ to create efficient java code. 
+ it uses lambda expressions.
+ 
+ Stream can be created using: 
+ 
+ -stream()
+ -  of()
+ 
+ 
+ Pipieline: 
+ ----------
+ A pipeline in StreamAPI is a sequence of stream operations
+ 
+ The operations like filter, map, collect etc are connected
+ and executed as chain of operations
+ 
+ These operations process the ata from a source and produces
+ a final result. 
+ 
+ Pipeline: 
+ Collection->Stream -> operations-> Result
+ 
+ Stream API supports two types of operations: 
+ 1. Intermediate operations:
+ 
+ Intermediate operations allow us to transform or filter the objects
+ before the final result is produced. 
+ These operations return another stream object as the result. 
+ These operations can be chained one  after the other. 
+ 
+ Terminal Operations: 
+ Terminal operations will start/trigger the execution of the 
+ entire stream pipeline. 
+ 
+ They produce a result such as a collection, they do not 
+ return a Stream/
+ Examples of terminal operations: 
+ collect, forEach, count, reduce, min, max, anyMatch, allMach
+ 
+ 
+ Lazy evaluation vs Eager evaluation: 
+ 
+ Lazy evaluation is used by intermediate operations like
+  - map, filter,  sorted etc. 
+  
+  These operations are called lazy because they are not executed
+  immediately when the stream is created.
+  They are just recorded to run later. 
+  
+  Actual operation starts only when terminal operation like
+  collect, forEach, count etc is invoked. 
+  
+  They are called lazy because they just build a pipeline and delaays
+  the execution until needed. 
+ 
+ 
+ Eager Evaluation: 
+ - Terminal operations like collect, forEach will 
+ trigger the execution of all the intermeidate operations
+ - as soon a terminal operation is called, it immediately executes
+   the intermediate functions/operations. 
+   
+ Thats why terminal operations are called eager operations. 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 2. Terminal operations
+ 
+ 
+ 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+

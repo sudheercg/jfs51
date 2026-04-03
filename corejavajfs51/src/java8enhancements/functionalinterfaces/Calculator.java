@@ -1,4 +1,4 @@
-package java8enhancements;
+package java8enhancements.functionalinterfaces;
 
 @FunctionalInterface
 public interface Calculator {

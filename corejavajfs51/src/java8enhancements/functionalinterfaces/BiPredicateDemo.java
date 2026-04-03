@@ -1,4 +1,4 @@
-package java8enhancements;
+package java8enhancements.functionalinterfaces;
 
 import java.util.function.BiPredicate;
 

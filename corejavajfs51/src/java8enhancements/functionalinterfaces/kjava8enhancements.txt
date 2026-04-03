@@ -112,6 +112,42 @@ Java 8 enhancements:
    
  
  
+ BiConsumer:
+  -------
+    Represents an operation that takes two inputs and returns no 
+    result, meaning, it returns a void
+    
+    Method: 
+    void accept(T t, U u);
+    
+    - Generally used to update two fields of an object
+    - To add entries to a map.
+    
+    
+ Supplier : 
+ ---------
+ 
+ - present in java.util.function
+ It represents a supplier of results.
+ - It takes no input arguments but it returns a result
+ - Generally used to generate some data without taking any input.  
+ 
+ 
+ Method:
+ 
+ 
+    /**
+     * Gets a result.
+     *
+     * @return a result
+     */
+    T get();
+    
+    get() takes no argument
+    returns a value of type T. 
+    
+    
+     
  
  
  
@@ -124,7 +160,8 @@ Java 8 enhancements:
  
  
  
- \
+ 
+ 
  
  
  
