@@ -14,7 +14,8 @@ import java.net.Socket;
 3. Read data from client
     by using BufferedReader, InputStreamReader etc.    
 4.     
-5. Close resources. 
+5. Close r
+esources. 
 */
 
 public class TCPServer {
