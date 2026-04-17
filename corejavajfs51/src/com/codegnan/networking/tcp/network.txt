@@ -1,0 +1,143 @@
+Client - Server Architecture: 
+-----------------------------
+
+Client: 
+-------
+A program that requests a service from the server. 
+
+eg: Browser
+
+Server:
+-------
+Is a program that provides a service
+
+Communication flow: 
+-------------------
+Client-> request -> Server -> Server Process request
+                                                 |
+Client<- response <- Server<- Server Response preperation 
+
+Ports: 
+-----
+- Ports are not hardware elements
+- Port is a logical connection to a computer. 
+- Ports are identified by a number in the range 1- 65535.
+- Each port may be dedicated to a particular server/service
+- Port numbers 1-1023 must be not be used by application programs they are for system. 
+
+Eg: MySQL : 3306
+    Tomcat: 8080
+    
+ IPAddress: 
+ Each computer on the internet will have unique IP Address. 
+ 
+ IPV4:  182.168.11.2
+ IPv6:  
+ 
+ 
+ 123.23.4.5:8080 - > myapp.com
+    
+ URL - Uniform Resource Locator
+ eg: http://www.codegnan.com
+ Signature: 
+   <protocol>://<hostname>[:<port>][//patnname][/<filename>][#<section>]
+   
+DNS: Domain name system
+DNS converts domain name to IP Address. 
+
+- Normally we use doain names intead of IP addresses, because they are easy to remember. 
+- domain names are user-friendly , they are internally mapped to a IP address. 
+
+
+Endpoint: 
+---------
+An endpoint is one end of of the communication channel in a network
+-It is a program that sends or recieves data. 
+- An endpoint is identified by
+  IP ADdress + Port number
+    eg:
+    Client endpoint:  192.168.1.10:5000
+    Server endpoint:  192.168.3.20:8080
+    
+ Socket: 
+ -------
+ Socket is a communication endpoint used to send and recieve data between
+ two omputers over a network. 
+ 
+ A socket is a combination of IPADdress and Port number which uniquely identifies
+ a connnection between two systems. 
+ 
+ In java, a socket is an object - Socket, ServerSocket, DatagramSocket which
+   enables the communication between client and server. 
+   
+   
+   TCP and UDP: 
+   
+   TCP - Transmission control protocol
+        -also known as connection oriented protocol(handshake)
+        - It makes sure that the data delivery is reliable. 
+        -  slower due to error checking 
+        
+       TCP flow: 
+       DAta is divided into packets.
+       Each packet will have a sequence number
+       EAch packet will also have a checksum. 
+        
+        
+   UDP - User datagram protocol
+       - connection less protocol,  data is sent directly.  
+       - unreliable - no guarantee or delivery 
+       - faster because it wont acknowledge. 
+       
+       
+       
+  TCP Socket Example" 
+  1. Server starts and waits
+  2. Clients connects
+  3. Data is exchanged
+  
+  TCPServver creation steps: 
+  -------------------------
+  1. Create ServerSocket and specify port 5000
+  2. Accept client connection
+  3. Read data from client
+      by using BufferedReader, InputStreamReader etc.    
+  4. Send Response to client
+      by using PrintWriter.     
+  5. Close resources. 
+  
+  
+  Steps to Create a UDP Server: 
+  ===========================
+  1. Create a socket with port.
+      - create a DatagramSocket
+      
+  2. We need to create a buffer
+     - buffer is a memory array , we create a buffer by byte[] array. 
+  3. Create a packet by using 
+     -  DatagramPacket class. 
+  4. call the method recieve() to recieve the message from the client
+  5. After the data is recieved in the form a packet, to display
+     the data, convert this to String. 
+  5. Close the socket. 
+     
+  
+  
+  
+  
+  
+  
+  
+  
+       
+   
+   
+   
+    
+    
+    
+    
+
+  
+    
+    

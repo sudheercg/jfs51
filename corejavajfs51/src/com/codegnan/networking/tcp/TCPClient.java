@@ -1,4 +1,4 @@
-package com.codegnan.networking;
+package com.codegnan.networking.tcp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
