@@ -15,7 +15,7 @@ Where does a thread exist ?
    an instance of that application in the memory. 
    
 - This instance is called a process, 
-  process is also known as "Context" of the application. 
+  process i–s also known as "Context" of the application. 
   
   - Each process contains metadata which will have the following: 
     - PID or processID

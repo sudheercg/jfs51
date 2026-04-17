@@ -1,0 +1,31 @@
+Method References: 
+
+Method reference is a feature supported in Java 8
+
+It uses an operator called double colon operator ::
+
+Lambda expression helps us to write inline implementation of 
+functional interface method. 
+
+Method references is a shorthand form of lambda expression
+Method reference just calls the existing method. 
+For method reference we do not pass the arguments, they are
+passed automatically 
+
+2 types of Method references: 
+ 1. static method reference
+ - when a functional interface method matches a static method 
+ signature we can use static method reference
+ 
+ Syntax:
+ ClassName :: staticMethod
+ 
+ 2. Instance Method Reference: 
+   Instance method reference is used to when a functional interface method matches with 
+   non-static method of a given object. 
+   
+   Syntax:
+   objectRef:: instanceMethod
+   
+ 
+

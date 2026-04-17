@@ -1,0 +1,286 @@
+java.io
+
+
+iostreams: 
+-In java, iostreams represents stream of 
+input and output. 
+
+Stream: sequence of bytes or characters
+
+- When an application reads a stream of data  from
+a file or any datasource, it is called input stream.
+
+- when an application sends/writes stream of data to a file or any other
+datasource, it is called output stream. 
+
+- There are two different types of streams:
+1. Character Streams:
+    Reads or writes the  character data, character by character. 
+    - Chracter Stream classes are useds to read and write character
+      data.
+      
+ File class (java.io)
+ 
+ File class has 2 different constructors:
+ File(String name):
+ creates a file object with the given name in argument
+ 
+ File file = new File("filename");
+ File file1 = new File("c:\\JFS51\\file1.txt");
+ 
+ Constructor2: 
+ File(dir, "filename");
+ This constructor is used to create a file in the specified
+ directory.
+ First argument is the name of the director, second argument
+ is the name of the file. 
+ 
+ Methods: 
+ exists(): returns true if the file/directory exists
+ createNewFile(): creates a empty file, returns true if created, false if alread
+                  exists
+ mkdir(): to create a director
+ isFile() : to check if it s a file or not
+ isDirectory():  returns true if  file object  points to the directory
+ list(): returns String[] of file /directory names
+ length() - returns the size ofa file in bytes
+ delete() - deletes the file or empty directory
+ 
+ 
+ FileWriter: 
+ ----------
+
+ 
+ -FileWriter class allows you to write the data to a 
+   file.
+   
+- It internally extends an abstract class Writer
+- It has multiple overloaded constructors
+FileWriter(String filename);
+FileWriter(String filename, boolean append);
+FileWriter(File f);
+FileWriter(File file, boolean append);
+
+try with resources(java 7)
+--------------------------
+try with resources allows you to declare resources like files, streams, database connections
+inside the try statement so that they are automatically closed after use. 
+
+- It eliminates the use for a finally block to close resources
+- prevents resource leaks
+- try with resources works with any object that implements AutoCloseable interface 
+
+Syntax: 
+
+try(FileWriter writer = new FileWriter("out.txt")){
+
+//statements
+
+}catch(Exception e){e.printStackTrace()}
+
+AutoCloseable interface: 
+=========================
+AutoClosable interface enables automatic resource management. 
+- its in java.lang
+- contains a single method close()
+
+Any class that implements Autoclosable can be used in
+try-with-resources
+eg: 
+FileWriter,FileReader,BufferedWriter,BufferedReader, Connection etc. 
+
+- When you use try-with-resources, JVM will automatically call close()
+- Even if exception occurs, resources are still safely closed. 
+
+
+
+FileReader class : 
+-------------------- 
+FileReader is present in java.io
+-Used for reading a file
+-REads the data character by character
+
+Constructors: 
+FileReader(String filename);
+FileReader(File file);
+
+read() - reads single character and returns teh int value(ascii 
+         equivalent decimal) 
+       - or it returns -1 if it reaches the end of the file. 
+       
+       
+BufferedWriter and BufferedReader classes: 
+- These classes adds a buffer(temporary memory) to speed up the 
+    reading and writing.
+- Buffer is a temporary memory area used to store data while reading or writing, 
+- All the characters are first read/written to a buffer and then all characters
+  are read/written at a time instead of one character a time. 
+  
+- In BufferedReader/BufferedWriter, the buffer improves the performance by
+  reducing direct I/O calls . 
+- read/wite happens in chunks instead of repeatedly accessing the file.  
+
+
+BufferedReader class: 
+- BufferedReader uses internal buffer
+- It reads a chunk of data from the file into memory once. 
+- when call readLine() or read() method the data is reterieved 
+  from the buffer in memory.
+- data is retrieved until the buffer is empty. 
+- readLine() method returns null once it reaches the end of file. 
+
+
+Abstract classes -  Reader and Writer :
+ 
+ They are used to read and write character data ,
+ 
+ Subclasses of Reader abstract class: 
+ - FileReader - reads from file
+ - BufferedReader - reads character data from Buffer
+ 
+ Subclasses of Writer abstract class: 
+ - FileWriter - writes to file
+ - BufferedWriter - writes using buffer
+ - PrintWriter - 
+     - It provides methods like print(), println() , printf() methods. 
+     - It can bsed to write different data types
+     - No need to handle IOExceptions explicitly.
+       as it does not throw checked exceptions.
+     - It can automatically flush data to the file when using
+         print(), println() or printf() method. 
+ 
+Bytestream classes: 
+
+They are used mainly when we want to work with binary data instead of
+text /character data. 
+
+- Generally used for non-text files like images,videos, audio, 
+   pdf, excel etc. 
+   
+- Some important classes of Byte streams are: 
+  - FileInputStream
+  - FileOutputStream
+  - BufferedInputStream
+  - BufferedOutputStream
+  
+  - Using these classes we can export and import java objects. 
+  
+  Wrting and Reading of an Object to a file: 
+  ------------------------------------------
+  Objhects can be turned into data(bytes), so that they can be,
+  - Writtten to a file
+  - Read from the file
+  - send over the network
+  
+  Java Object -> Byte stream -> Store in the file/disk/db
+  
+ file-> bytestream -> java object
+  
+Serialization: 
+- Serialization is the process of converting an object into a byte stream
+- Serialization is used to persist(saves the state) the object even 
+  after the program exigs. 
+- The converted byte stream can be saved as a file or sent over a network.
+- The byte stream can be sent to a different machine. 
+- Generally the bytestream is stored in a file with .ser extension. This
+  file is platform independent. 
+  
+  Steps for Serialization: 
+  - create a n object of FileOutputStream
+  - Pass the name of the file(String) as an argument to FileInputStream constructor
+  - Wrap it with BufferedOutputStream - for faster writing
+  - Wrap with ObjectOutputStream which converts the object into bytes. 
+  - Use writeObject(object) to save the object. 
+  
+  
+  Steps for Deserialization: 
+  -  Deserialization is the process of converting byte stream into an object. 
+  -  Create an object FileInputStream
+  - Pass the name of the file(String) as an argument to FileOutputStream constructor. 
+  - Wrap it with BufferedInputSTream for faster reading
+  - Wrap with ObjedtInputStream which rebuilds the object from bytes. 
+  - Use readObject() to get the originbal object. 
+  
+  Marker Interface: 
+  A marker interface is an interface with no methods. It is used
+  by JVM or the compiler to mark a class with some special meaning. 
+  
+  - It is also called as Tag interface
+  - In modern java we use Annotations instead of Marker interfaces. 
+  
+examples of marker interfaces: 
+ Serializable
+ Cloneable
+ RandomAccess
+ 
+  NotserializableException: 
+  ------------------------
+  NotSerializableException is a runtime exception. 
+  It occurs when we try to serialization an obect that does not implement Serializable
+   interface. 
+  For an object of a class to be eligible for serialization process, the class
+   must implement Serializable marker interface. 
+   
+ 
+   
+  transient modifier:
+  ==================
+  
+  transient is a non-access modifier 
+  It is used to exclude a variable from serialization process. 
+  
+  When an object is seriallized into a bytestream all of its variables are automatically
+  saved. 
+  
+  But when we want a particular field to skip the serialization process, we 
+  need to use the modifier 'transient' for that field. 
+  
+  Eg; Passwords, secret keys or some confidential data.
+  
+  transient modifier only works with instance variables.
+  
+ transient modifier with static variables: 
+ -----------------------------------------
+ static variables are not serialized at all
+ Serialization works on objects
+ static variables belong to the class, but not individual objects
+ so java does not save static variables when serializing an object. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+

@@ -1,0 +1,44 @@
+Optional: 
+
+Optional<T>  is a container which may or may not
+hold a non-null value.
+
+- It is like a box which either have something inside
+  or empty
+- Optional is introduced to avoid NullPointerException. 
+
+-Without Optional, if a method returns null we must
+ manually check with if condition: 
+ 
+ if(obj!=null){
+ //perform something
+ }
+ - If this check is not performed , we get NullPointerException when the
+   object is null. 
+   
+
+- With Optional class, it is safe to represent null values. 
+
+Different Ways to Optional: 
+1. To create an empty Optional object: 
+   Optional.empty()
+2. To create an Optional with an object which contains a value
+    Optional.of(obj);
+3. To create an optional which may hold null 
+    Optional.ofNullable(obj)
+    
+    
+Methods of Optional: 
+1. To  check if an object is null or not: 
+   ifPresent() - returns boolean true if object exists, returns false if not. 
+2. To get the value: 
+    get() - returns the value but throws an exception if it is empty. 
+    orElse(default value) - returns value if present, but shows default value if 
+                            value doesnt exist
+    orElseThrow() - throws a exception when empty
+    
+           
+   
+   
+   
+   

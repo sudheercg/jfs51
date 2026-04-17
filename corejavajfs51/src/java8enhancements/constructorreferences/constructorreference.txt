@@ -1,0 +1,25 @@
+Constructor Reference:
+
+Constructor reference are u sed to refere to a constructor of a class. 
+We can refer to the constructor of a class by using new keyword. 
+
+eg: MyClass :: new
+
+Constructor reference can be used when the constructor signature
+matches with method signature of functional interface. 
+
+- Instead of writing the lambda like
+  (name)-> new MyClass(name),
+  we just refer to the constructor 
+  by using
+  MyClass::new
+  
+  When the method of functional interface is invoked, the 
+  constructor will be automatically called. 
+  
+  
+  
+  
+
+
+

@@ -1,0 +1,151 @@
+Date class:
+===========
+
+- Date is a class used to represent date and time.
+- It it is n java.util package
+- It uses epoch date.
+- Epoch date in java considers
+  January 1, 1970, 00:00:00 as the fixed starting point  in time.
+ 
+ - Date is stored as milliseconds since the epoch time. 
+ - It is also called as Unix timestamp. 
+ 
+ 
+- Date class is not thread-safe because it is Mutable.
+- this leads to bugs in the multi threaded programs
+
+- There are many deprecated methods in Date class:
+   eg: 
+   getDate()
+   setDate()
+   getMont()
+   getYear()
+   setMonth() 
+   
+ - Timezone problems will arise because results of the time will depend on 
+    System default timezones.   
+    
+    -Date is not flexible for modern application development because of confusing
+       and incosistent methods
+       
+ Instead of Date class there are many new and better alternatives from Java 8 onwards
+ examples: 
+ LocalDate  - Only Date
+ LocalTime - only time
+ LocalDateTime - date +time
+ 
+ 
+ SimpleDateFormat:
+ ----------------
+ -It is present in java.text package. 
+ 
+ - To format and parse dates, Java provides a class called SimpleDateFormat. 
+ 
+ - The format of date can be changed by using SimpleDateFormat.
+ 
+ - SimpleDateFormat is used to convert Date -> String
+   and String to Date, this is called Parsing. 
+   
+   SimpleDateFormat formats the date in different formats: 
+   "dd-MM-yyyy"
+   "dd/MM/yyyy HH:mm:ss"
+   "EEEE, MMMM dd, yyyy"
+   
+   In the  above,  
+   dd- 2 digits of the day eg: 31
+   MM- 2 digits of the Month: 01
+   yyyy- 4 digits of the year
+   HH - 2 digits of the hour eg: 12
+   mm- minutes
+   ss - seconds  
+   EEEE- full day name      eg: Tuesday
+   MMMM - full month name   eg: January
+   
+   parse() method in SimpleDateFormat is used to convert a date in String format
+   to Date object. 
+   It throws java.text.ParseException, which must either be handled using try..catch
+   or can be propogated using throws keyword. 
+   
+   
+   LocalDate:
+   ==========
+   LocalDate represents only the date i.e year,month and day
+   It will not show time or timezone
+   We can add or remove the days by using methods like
+    plusDays() or minusMonths()
+   
+   It is generally for birthdays, holidays or deadlines. 
+   LocalDate is immutable
+   - modifying a LocalDate object will result in creation of a new object. 
+   
+  LocalTime: 
+  ===========
+  LocalTime represents time only in hours, minutes, seconds and nanoseconds
+  - No date and timezone
+  - methods: 
+      - now()
+      - of()
+      - plusHours(), minusMinutes()
+  - Generally used for time-of-day operations like office closing time etc. 
+  
+  
+ LocalDateTime:
+ =============
+ - Combines date + time 
+ - It will not show the timezone eg. IST, GMT
+ - It is immutable
+ - It is widely used in applications
+ -Methods: now(), of(), plysDays(), plusHours()
+ - Generally used for timestamps .
+ 
+ 
+ DateTimeFormatter:
+ ===============\
+ - It is used to format and parse dates. 
+ - It is  a replacement of SimpleDateFormat
+ - It is thread-safe
+ - Methods: format and Parse()
+ 
+Duration:
+ =========
+ - Represents time difference in seconds/nanoseconds
+ - It works with LocalTime and LocalDateTime
+ - Methods: toHours(), toMinutes(), toSeconds();
+ - Used for time intervals eg.  execution time
+ 
+ 
+ Period:
+ ======
+ Represents date difference in years,months and days
+ Works with LocalDate only
+ Created using Period.between(start,end);
+ Generally used to calculate age, date gaps. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+   
+   
+   
+   
+
+   
+    
+    
+    
+   
+   
+   
+   
+ 
+ 
+ 
+  
+ 
+
+

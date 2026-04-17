@@ -148,7 +148,20 @@ Java 8 enhancements:
     
     
      
- 
+ Write a Java program to demonstrate Method References using the Consumer functional interface.
+
+📌 Requirements:
+Create a class Utility with:
+One static method that takes a String and prints: "Hello " + name
+One instance method that takes a String and prints the string in uppercase
+In the main class:
+Create a String variable with any value
+Use method reference to static method to display the greeting
+Use method reference to instance method to display the uppercase string
+
+
+Hint: 
+Consumer - accept(T t)
  
  
  

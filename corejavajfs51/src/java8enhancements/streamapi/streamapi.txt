@@ -98,10 +98,20 @@ Streams help:
  2. Terminal operations
  
  
- 1
+reduce (identity,(a,b)-> a operation b);
+
+- identity: the starting value
+
+- (a,b)-> a operation b:
+This is a lambda expression
+ 
+ a-> accumulated result(previous value)
+ b-> current element from the stream
+ 
+ eg: result = result + nextElement
  
  
- 
+ Optional" 
  
  
  
