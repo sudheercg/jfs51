@@ -1,4 +1,4 @@
-package com.codegnan.threads;
+package com.codegnan.threads.synchronizeddemo;
 
 public class CounterDemo {
 	
