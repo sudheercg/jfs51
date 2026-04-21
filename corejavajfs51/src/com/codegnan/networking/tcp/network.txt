@@ -120,6 +120,29 @@ An endpoint is one end of of the communication channel in a network
   5. After the data is recieved in the form a packet, to display
      the data, convert this to String. 
   5. Close the socket. 
+  
+  
+  InetAddress:
+  ============
+  InetAddress is a class in java.net package.
+  It is used to represent an IP address.
+  It also gives the details about the DNS.
+  
+  Important methods : 
+  getByName()  
+  returns IPAddress of a given hostname. 
+  
+  getLocalHost(); 
+  returns your systems IP Address
+  
+  getAllByName(String host)
+  returns all IPs for a hostname
+  
+  getHostName(): 
+  returns hostname
+  
+  getHostAddress()
+  -returns IPAddress a s a String
      
   
   

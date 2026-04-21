@@ -1,4 +1,4 @@
-package com.codegnan.threads;
+package com.codegnan.threads.threadclass;
 
 public class MyThread extends Thread{
 	

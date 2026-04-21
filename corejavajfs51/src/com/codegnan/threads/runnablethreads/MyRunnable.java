@@ -1,4 +1,4 @@
-package com.codegnan.threads;
+package com.codegnan.threads.runnablethreads;
 
 // Thread creation using Runnable interface (Lambda)
 public class MyRunnable {

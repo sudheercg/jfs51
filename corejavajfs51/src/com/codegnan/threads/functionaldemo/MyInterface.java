@@ -1,4 +1,4 @@
-package com.codegnan.threads;
+package com.codegnan.threads.functionaldemo;
 
 @FunctionalInterface
 interface MyInterface {

@@ -28,18 +28,7 @@ public class UndoRedoDemo {
 		
 		System.out.println("After Redo operation: "+undoStack);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 	}
 
 }

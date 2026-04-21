@@ -1,4 +1,4 @@
-package com.codegnan.threads;
+package com.codegnan.problems;
 import java.util.Random;
 import java.util.Scanner;
 

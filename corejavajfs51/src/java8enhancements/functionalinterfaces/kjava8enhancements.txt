@@ -14,9 +14,17 @@ Java 8 enhancements:
   
   -First class citizens: 
   First class citizens means functions can be treated as variables
+  Assigned to a variable:
+   Runnable r = () -> System.out.println("Hello");
+  
   they can be assigned to a variables,
-  they can be passed as arguments
+  they can be passed as arguments:
+  Passed as an argument:
+     new Thread(() -> System.out.println("Running")).start();
+  
   and they can be returned from other functions. 
+  
+  Supplier<String> getMsg() { return () -> "Hello"; }
   
  Important features of Java 8: 
  1. Lamdda expressions
@@ -58,7 +66,7 @@ Java 8 enhancements:
  
  Predicate
  - Predicate functional interface is present in 
-   java.util.function
+     java.util.function
  - It has a Single abstract method which returns a boolean value:
     boolean test(T t);
   - test() method has a single argument and returns a boolean
